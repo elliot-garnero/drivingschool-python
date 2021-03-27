@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+<h1>Auto école</h1>
+<a class="accueilbutton" href="{% url 'polls:index' %}">Accueil</a>
+
+<div class="content-center">
+  <h3>Rendez-vous n°{{ meeting.id }}</h3>
+  <h3>Eleve: {{ meeting.student.firstName }} {{ meeting.student.lastName }}</h3>
+  <h3>Instructeur: {{ meeting.instructor.firstName }} {{ meeting.instructor.lastName }}</h3>
+  <h3>{{ meeting.hour }}</h3>
+  <h3>Le {{ meeting.date | date:"d/m/y" }} à {{ meeting.date | time:"H\Hi" }}</h3>
+  <h3>Lieu: {{ meeting.place }}</h3>
+</div>

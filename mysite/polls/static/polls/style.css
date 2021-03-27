@@ -1,0 +1,66 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #0693e3;
+  color: whitesmoke;
+  font-size: large;
+  margin: 5rem;
+}
+
+.content-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid whitesmoke;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.accueilbutton {
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.accueilbutton:hover {
+  background-color: #005c91;
+  cursor: pointer;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.instructor_link {
+  text-decoration: underline;
+}
+
+.lists {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  width: 220px;
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  box-shadow: 4px 4px 0 whitesmoke;
+}
+
+li:hover {
+  background-color: #005c91;
+  cursor: pointer;
+}
+
+.meeting-list {
+  display: flex;
+}
+
+.meeting-list li {
+  margin-right: 15px;
+}

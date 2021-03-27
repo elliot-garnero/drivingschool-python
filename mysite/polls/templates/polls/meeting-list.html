@@ -1,0 +1,22 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+<h1>Auto école</h1>
+<a class="accueilbutton" href="{% url 'polls:index' %}">Accueil</a>
+
+<h2>Liste de rendez-vous</h2>
+{% if meeting_list %}
+<ul class="meeting-list">
+{% for meeting in meeting_list %}
+<li>
+    <a href="{% url 'polls:meeting' meeting.id %}">
+    <p>Avec: {{ meeting.instructor.firstName }} {{ meeting.instructor.lastName }}</p>
+    <p>Lieu: {{ meeting.place }}</p>
+    <p>Date: {{ meeting.date | date:"d/m/y" }} à {{ meeting.date | time:"H\Hi" }}</p>
+    </a>
+</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>Pas de rendez-vous</p>
+{% endif %}
